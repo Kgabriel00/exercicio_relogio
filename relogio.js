@@ -33,12 +33,12 @@ switch(hoje){
         caixa_dias.innerText = '**DATE ERROR**'
 } 
 
-if(hora < 10){
+if(hora < 10 && minuto < 10){                
+    caixa_hora.innerText = `0${hora}:0${minuto}`  
+}else if(hora < 10){
     caixa_hora.innerText = `0${hora}:${minuto}`
 }else if(minuto < 10){
     caixa_hora.innerText = `${hora}:0${minuto}`
-}else if(hora < 10 && minuto < 10){                 //condição não está funcionando
-    caixa_hora.innerText = `0${hora}:0${minuto}`  
 }else{
     caixa_hora.innerText = `${hora}:${minuto}`
 }
